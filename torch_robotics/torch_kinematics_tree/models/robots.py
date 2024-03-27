@@ -140,3 +140,10 @@ class Differentiable2LinkPlanar(DifferentiableTree):
         self.model_path = robot_file.as_posix()
         self.name = "differentiable_2_link_planar"
         super().__init__(self.model_path, self.name, link_list=link_list, device=device)
+
+class DifferentiableCartpole2L(DifferentiableTree):
+    def __init__(self, link_list: Optional[str] = None, device='cpu'):
+        robot_file = get_robot_path() / 'cartpole2l' / 'cartpole_double.urdf'
+        self.model_path = robot_file.as_posix()
+        self.name = "differentiable_cartpole2l"
+        super().__init__(self.model_path, self.name, link_list=link_list, device=device)

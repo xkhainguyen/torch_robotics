@@ -13,8 +13,8 @@ if __name__ == "__main__":
     fix_random_seed(seed)
 
     batch_size = 1
-    device = "cpu"
-    # device = "cuda:0"
+    # device = "cpu"
+    device = "cuda:0"
 
     print("\n===========================Panda Model===============================")
     diff_panda = DifferentiableFrankaPandaDynamics(device=device)
