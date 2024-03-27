@@ -91,30 +91,4 @@
     </collision>
   </link>
 
-  <joint name="joint_ee" type="fixed">
-    <axis xyz="1 0 0"/>
-    <parent link="link_2"/>
-    <child link="link_ee"/>
-    <origin xyz="0.25 0 0.0"/>
-  </joint>
-
-
-  <link name="link_ee">
-    <visual>
-      <origin rpy="0.0 1.57079632679 0" xyz="0.01 0.0 0.0"/>
-      <geometry>
-        <sphere radius="0.01"/>
-      </geometry>
-      <material name="white">
-        <color rgba="1 1 1 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin rpy="0.0 1.57079632679 0" xyz="0.01 0.0 0.0"/>
-      <geometry>
-        <sphere radius="0.01"/>
-      </geometry>
-    </collision>
-  </link>
-
 </robot>
