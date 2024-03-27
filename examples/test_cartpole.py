@@ -21,7 +21,7 @@ if __name__ == "__main__":
     print(diff_cp2l.print_dynamics_info())
     print(diff_cp2l._n_dofs)
     with TimerCUDA() as t:
-        q = torch.rand(batch_size, diff_cp2l._n_dofs).to(device) * 2 - 1
+        q = torch.rand(batch_size, diff_cp2l._n_dofs).to(device)
         qd = torch.rand(batch_size, diff_cp2l._n_dofs).to(device)
         qdd = torch.rand(batch_size, diff_cp2l._n_dofs).to(device)
         f = diff_cp2l.compute_inverse_dynamics(q, qd, qdd)
